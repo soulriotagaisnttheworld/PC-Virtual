@@ -1,0 +1,25 @@
+
+{
+  "profile": "POCO X7 Pro",
+  "application": "Roblox Windows",
+  "resolution": {
+    "width": 960,
+    "height": 544
+  },
+  "graphics": {
+    "video_memory_mb": 2048,
+    "driver": "default",
+    "renderer": "WineD3D",
+    "vsync": false
+  },
+  "performance": {
+    "box64_preset": "compatibility",
+    "target_fps": 90,
+    "fullscreen": true
+  },
+  "notes": [
+    "Reference configuration only",
+    "Not an official Winlator import file",
+    "Actual FPS depends on compatibility and drivers"
+  ]
+}
