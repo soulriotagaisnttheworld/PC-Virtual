@@ -1,0 +1,24 @@
+
+FROM ubuntu:22.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y \
+    xfce4 \
+    xfce4-terminal \
+    xrdp \
+    dbus-x11 \
+    sudo \
+    wget \
+    curl \
+    ca-certificates \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN useradd -m -s /bin/bash gamer \
+    && echo 'gamer:gamer' | chpasswd \
+    && adduser gamer sudo
+
+EXPOSE 3389
+
+CMD ["/usr/sbin/xrdp", "--nodaemon"]
